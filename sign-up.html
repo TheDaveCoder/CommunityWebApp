@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sign-up.css">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="lower-bar"></div>
+        <div class="left-bar"></div>
+        <div class="right-bar">
+            <div class="content-wrapper">
+                <div class="heading-wrapper">
+                    <h1>Create Account</h1>
+                </div>
+                <div class="form-container">
+                    <form action="">
+                        <div class="basic-input">
+                            <div class="account-type">
+                                <label>Account Type</label>
+                                <div class="account-type-options">
+                                    <div class="option-wrapper">
+                                        <input type="radio" id="is-user" name="account-type" value="isUser" checked>
+                                        <label for="is-user" class="checkmark"></label>
+                                        <label class="text-label" id="user" for="is-user">User</label>
+                                    </div>
+                                    <div class="option-wrapper">
+                                        <input type="radio" id="is-admin" name="account-type" value="isAdmin">
+                                        <label for="is-admin" class="checkmark" id="admin-custom-radio-button"></label>
+                                        <label class="text-label" id="admin" for="is-admin">Admin</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-wrapper" id="fname-wrapper">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" name="first-name" required>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" name="last-name" required>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="block">Block/Lot No.</label>
+                                <input type="text" id="block" name="block" required>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="street">Street</label>
+                                <input type="text" id="street" name="street" required>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="email-address">Email Address</label>
+                                <input type="text" id="email-address" name="email-address" required>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="contact-number">Contact No.</label>
+                                <input type="tel" id="contact-number" name="contact-number" pattern="[0-9]{11}"
+                                    required>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="password">Enter Password</label>
+                                <input type="password" id="password" name="password" required>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="confirm-password">Confirm Password</label>
+                                <input type="password" id="confirm-password" name="confirm-password" required>
+                            </div>
+                        </div>
+                        <div class="btn-wrapper">
+                            <button type="submit">Sign Up</button>
+                        </div>
+                        <p class="login-redirect">
+                            Already have an account?
+                            <a href="sign-in.html">Login</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
