@@ -115,8 +115,20 @@ body {
   transform: none;
 }
 
+.account-type-switch:has(.radio-buttons>#is-user:checked)+.Main>.form-login>h3::after {
+  content: "Sign in with your User Account";
+  color: var(--text-color);
+  font-weight: bold;
+}
+
 .radio-buttons:has(#is-admin:checked)+.labels>.switch-bar {
   transform: translateX(8.9rem);
+}
+
+.account-type-switch:has(.radio-buttons>#is-admin:checked)+.Main>.form-login>h3::after {
+  content: "Sign in with your Admin Account";
+  color: var(--text-color);
+  font-weight: bold;
 }
 
 .Main {
