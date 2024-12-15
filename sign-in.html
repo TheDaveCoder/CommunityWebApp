@@ -1,79 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sign-in.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Sign In Page</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="sign-in.css" />
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <title>Sign In Page</title>
-</head>
-
-<body>
-  <div class="lower-bar"></div>
-  <div class="left-bar"></div>
-  <div class="right-bar">
-    <div class="main-content-wrapper">
-      <div class="account-type-switch">
-        <div class="radio-buttons">
-          <input type="radio" id="is-user" name="account-type" value="isUser" checked>
-          <input type="radio" id="is-admin" name="account-type" value="isAdmin">
+  <body>
+    <div class="lower-bar"></div>
+    <div class="left-bar"></div>
+    <div class="right-bar">
+      <div class="main-content-wrapper">
+        <div class="account-type-switch">
+          <div class="radio-buttons">
+            <input
+              type="radio"
+              id="is-user"
+              name="account-type"
+              value="isUser"
+              checked
+            />
+            <input
+              type="radio"
+              id="is-admin"
+              name="account-type"
+              value="isAdmin"
+            />
+          </div>
+          <div class="labels">
+            <div class="switch-bar"></div>
+            <label class="text-label" id="user" for="is-user">User</label>
+            <label class="text-label" id="admin" for="is-admin">Admin</label>
+          </div>
         </div>
-        <div class="labels">
-          <div class="switch-bar"></div>
-          <label class="text-label" id="user" for="is-user">User</label>
-          <label class="text-label" id="admin" for="is-admin">Admin</label>
-        </div>
-      </div>
-      <div class="Main">
-        <!--For Login Form-->
-        <div class="form-login">
-          <h3></h3>
-          <form action="#">
-            <div class="input-box">
-              <input type="textbox" placeholder="Username" required />
-              <i class="bx bxs-user"></i>
-            </div>
-
-            <div class="input-box">
-              <input type="email" placeholder="Enter Email" required />
-              <i class="bx bxs-envelope"></i>
-            </div>
-
-            <div class="input-box">
-              <input type="password" placeholder="Enter Password" required />
-              <i class="bx bxs-lock-alt"></i>
-            </div>
-
-            <div class="remember-forgot">
-              <label><input type="checkbox" />Remember Me</label>
-              <a href="#">Forgot your Password?</a>
-            </div>
-
-            <button type="submit" class="btn">Login In</button>
-
-            <div class="login-register">
-              <p>
-                Don't have an account?
-                <a href="sign-up.html" class="register-link">Register</a>
-              </p>
-            </div>
-
-            <div class="other-info">
-              <div class="info-item">
-                <i class="bx bxs-phone-call"></i>
-                <p class="number">+63 945365230</p>
+        <div class="Main">
+          <!--For Login Form-->
+          <div class="form-login">
+            <h3></h3>
+            <form action="#">
+              <div class="input-box">
+                <input type="textbox" placeholder="Username" required />
+                <i class="bx bxs-user"></i>
               </div>
-              <div class="info-item">
+
+              <div class="input-box">
+                <input type="email" placeholder="Enter Email" required />
                 <i class="bx bxs-envelope"></i>
-                <p class="email">davejaek002038@jabe.come</p>
               </div>
-            </div>
-          </form>
+
+              <div class="input-box">
+                <input type="password" placeholder="Enter Password" required />
+                <i class="bx bxs-lock-alt"></i>
+              </div>
+
+              <div class="remember-forgot">
+                <label><input type="checkbox" />Remember Me</label>
+                <a href="#">Forgot your Password?</a>
+              </div>
+
+              <button type="submit" class="btn">Login</button>
+
+              <div class="login-register">
+                <p>
+                  Don't have an account?
+                  <a href="sign-up.html" class="register-link">Register</a>
+                </p>
+              </div>
+
+              <div class="other-info">
+                <div class="info-item">
+                  <i class="bx bxs-phone-call"></i>
+                  <p class="number">+63 945365230</p>
+                </div>
+                <div class="info-item">
+                  <i class="bx bxs-envelope"></i>
+                  <p class="email">davejaek002038@jabe.come</p>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>

@@ -1,241 +1,245 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
-    --bg-color: #091828;
-    --secondary-bg-color: #D9D9D9;
-    --secondary-color: #474973;
-    --fg-color: white;
+  --bg-color: #091828;
+  --secondary-bg-color: #d9d9d9;
+  --secondary-color: #3684db;
+  --fg-color: white;
 }
 
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
-    outline: none;
+  outline: none;
 }
 
 .bg {
-    background-color: var(--bg-color);
-    width: 100%;
-    height: 100vh;
-    position: relative;
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 100vh;
+  position: relative;
 }
 
 .lower-bar {
-    /* layout */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
+  /* layout */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 
-    /* properties */
-    background-color: var(--fg-color);
-    width: 100%;
-    height: 40%;
+  /* properties */
+  background-color: var(--fg-color);
+  width: 100%;
+  height: 40%;
 }
 
 .left-bar {
-    /* layout */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
+  /* layout */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 
-    /* properties */
-    border-radius: 0 0 15rem 0;
-    background-color: var(--bg-color);
-    width: 30%;
-    height: 100%;
+  /* properties */
+  border-radius: 0 0 15rem 0;
+  background-color: var(--bg-color);
+  width: 30%;
+  height: 100%;
 }
 
 .right-bar {
-    /* layout */
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
+  /* layout */
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
 
-    /* children layout manager */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  /* children layout manager */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    /* properties */
-    border-radius: 15rem 0 0 0;
-    background-color: var(--fg-color);
-    width: 70%;
-    height: 100%;
+  /* properties */
+  border-radius: 15rem 0 0 0;
+  background-color: var(--fg-color);
+  width: 70%;
+  height: 100%;
 }
 
 .content-wrapper {
-    border-radius: 20px;
-    width: min(55rem, 80%);
-    background-color: var(--secondary-bg-color);
+  border-radius: 20px;
+  width: min(55rem, 80%);
+  background-color: var(--secondary-bg-color);
 }
 
 .heading-wrapper {
-    margin: 0 auto;
-    width: 90%;
-    padding: 2rem 0 1rem 0;
+  margin: 0 auto;
+  width: 90%;
+  padding: 2rem 0 1rem 0;
 }
 
-.content-wrapper>.heading-wrapper>h1 {
-    color: var(--bg-color);
-    font-size: 3rem;
+.content-wrapper > .heading-wrapper > h1 {
+  color: var(--bg-color);
+  font-size: 3rem;
 }
 
 .basic-input {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
-    row-gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 1rem;
 }
 
 .form-container {
-    background-color: var(--bg-color);
-    width: 100%;
-    padding: 2rem 0;
-    border-radius: 20px;
+  background-color: var(--bg-color);
+  width: 100%;
+  padding: 2rem 0;
+  border-radius: 20px;
 }
 
 form {
-    width: 90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
 label {
-    color: white;
+  color: white;
 }
 
 input {
-    color: var(--bg-color);
+  color: var(--bg-color);
 }
 
-.account-type>label {
-    font-weight: bold;
+.account-type > label {
+  font-weight: bold;
 }
 
 .account-type-options {
-    margin-top: 1rem;
-    width: 100%;
-    height: 1.5rem;
-    display: flex;
-    gap: 2rem;
+  margin-top: 1rem;
+  width: 100%;
+  height: 1.5rem;
+  display: flex;
+  gap: 2rem;
 }
 
 .option-wrapper {
-    position: relative;
-    display: flex;
-    cursor: pointer;
+  position: relative;
+  display: flex;
+  cursor: pointer;
 }
 
 .option-wrapper input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 1.5rem;
-    width: 1.5rem;
-    background-color: var(--fg-color);
-    border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: var(--fg-color);
+  border-radius: 50%;
 }
 
-.option-wrapper:hover input~.checkmark {
-    background-color: #474973;
-    cursor: pointer;
+.option-wrapper:hover input ~ .checkmark {
+  background-color: var(--secondary-color);
+  cursor: pointer;
 }
 
-.option-wrapper input:checked~.checkmark {
-    background-color: var(--fg-color);
+.option-wrapper input:checked ~ .checkmark {
+  background-color: var(--fg-color);
 }
 
 .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 0.75rem;
-    height: 0.75rem;
-    border-radius: 50%;
-    background: #091828
+  content: "";
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #091828;
 }
 
-.option-wrapper input:checked~.checkmark:after {
-    display: block;
+.option-wrapper input:checked ~ .checkmark:after {
+  display: block;
 }
 
 .text-label {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #user {
-    left: 2rem;
+  left: 2rem;
 }
 
 #admin {
-    left: 7rem;
+  left: 7rem;
 }
 
 #admin-custom-radio-button {
-    left: 5rem;
+  left: 5rem;
 }
 
 .input-wrapper {
-    display: flex;
-    gap: 0.5rem;
-    flex-direction: column;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
 }
 
 .input-wrapper label {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .input-wrapper input {
-    padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem;
 }
 
 #fname-wrapper {
-    grid-column-start: 1;
+  grid-column-start: 1;
 }
 
 .btn-wrapper {
-    margin: 2.5rem 0 1rem 0;
-    text-align: center;
+  margin: 2.5rem 0 1rem 0;
+  text-align: center;
 }
 
 button {
-    border: 0;
-    font-weight: bold;
-    font-size: 1rem;
-    padding: 0.5rem 5rem;
-    cursor: pointer;
-    border-radius: 5px;
+  border: 0;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5rem 5rem;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 button:hover {
-    background-color: #474973;
+  background-color: var(--secondary-color);
 }
 
 .login-redirect {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
 }
 
-.login-redirect>a {
-    color: white;
-    font-weight: bold;
+.login-redirect > a {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.login-redirect a:hover {
+  color: white;
 }
