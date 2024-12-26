@@ -1,0 +1,147 @@
+/* Basic layout */
+/* ############################## */
+
+/* Background */
+/* --------------- */
+.bg {
+    /* layout */
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bg-color);
+
+    /* content layout */
+    position: relative;
+    z-index: 1;
+}
+
+.lower-bar {
+    /* layout */
+    height: 50vh;
+    width: 100%;
+    background-color: var(--text-color);
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+.left-bar {
+    /* layout */
+    height: 100%;
+    width: 7.5%;
+    background-color: var(--bg-color);
+    position: absolute;
+    left: 0;
+    z-index: 3;
+
+    /* properties */
+    border-radius: 0 0 3rem 0;
+}
+
+.right-bar {
+    /* layout */
+    height: 100%;
+    width: 92.5%;
+    background-color: var(--text-color);
+    position: absolute;
+    right: 0;
+    z-index: 3;
+
+    /* properties */
+    border-radius: 3rem 0 0 0;
+}
+
+/* menu-content */
+/* --------------- */
+.menu-content-wrapper {
+    padding: 2.5rem 0;
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-content-wrapper>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    position: relative;
+}
+
+.selector-bar {
+    background-color: var(--secondary-bg);
+    height: 6.5rem;
+    width: 0.25rem;
+
+    position: absolute;
+    left: -1.125rem;
+}
+
+.menu-content-wrapper>ul>li {
+    list-style-type: none;
+}
+
+.menu-content-wrapper>ul>li>a {
+    text-decoration: none;
+}
+
+.logo {
+    color: var(--secondary-bg);
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 0.75rem;
+}
+
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.menu-btn>svg {
+    color: var(--secondary-text);
+}
+
+.menu-btn>h1 {
+    color: var(--secondary-text);
+}
+
+/* MENU FUNCTIONALITIES */
+/* ############################## */
+
+.menu-btn.selected-button {
+    cursor: default;
+    pointer-events: none;
+}
+
+.menu-btn.selected-button svg {
+    color: var(--secondary-bg);
+}
+
+.menu-btn.selected-button .menu-btn-title {
+    color: var(--secondary-bg);
+}
+
+ul:has(li>a[href="dashboard.html"].selected-button)>.selector-bar {
+    top: -0.5rem;
+}
+
+ul:has(li>a[href="dues.html"].selected-button)>.selector-bar {
+    top: 6rem;
+}
+
+ul:has(li>a[href="forum.html"].selected-button)>.selector-bar {
+    top: 14rem;
+}
+
+ul:has(li>a[href="announcement.html"].selected-button)>.selector-bar {
+    top: 21rem;
+}

@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&display=swap');
+
+:root {
+  /* colors */
+  --bg-color: #091828;
+  --secondary-bg: #3684db;
+  --text-color: white;
+  --secondary-text: #808080;
+  --debug: red;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montagu Slab", sans-serif;
+}

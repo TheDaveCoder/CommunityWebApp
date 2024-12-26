@@ -64,12 +64,12 @@ body {
 }
 
 .main-content-wrapper {
-  background-color: #d9d9d9;
-  border-radius: 13px 13px 0 0;
+  background-color: var(--secondary-bg);
+  border-radius: 13px;
 }
 
 .account-type-switch {
-  background-color: #d9d9d9;
+  background-color: var(--secondary-bg);
   border-radius: 13px 13px 0 0;
   padding: 1rem 3rem;
 }
@@ -82,14 +82,14 @@ body {
   position: relative;
   display: flex;
   gap: 3rem;
-  color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .switch-bar {
   position: absolute;
   bottom: 0;
   left: 0.5rem;
-  background-color: var(--bg-color);
+  background-color: var(--text-color);
   height: 5%;
   width: 20%;
   transition: 0.2s;
@@ -107,27 +107,21 @@ body {
   cursor: pointer;
 }
 
-.radio-buttons:has(#is-user:checked) + .labels > .switch-bar {
+.radio-buttons:has(#is-user:checked)+.labels>.switch-bar {
   transform: none;
 }
 
-.account-type-switch:has(.radio-buttons > #is-user:checked)
-  + .Main
-  > .form-login
-  > h3::after {
+.account-type-switch:has(.radio-buttons > #is-user:checked)+.Main>.form-login>h3::after {
   content: "Sign in with your User Account";
   color: var(--text-color);
   font-weight: bold;
 }
 
-.radio-buttons:has(#is-admin:checked) + .labels > .switch-bar {
+.radio-buttons:has(#is-admin:checked)+.labels>.switch-bar {
   transform: translateX(8.9rem);
 }
 
-.account-type-switch:has(.radio-buttons > #is-admin:checked)
-  + .Main
-  > .form-login
-  > h3::after {
+.account-type-switch:has(.radio-buttons > #is-admin:checked)+.Main>.form-login>h3::after {
   content: "Sign in with your Admin Account";
   color: var(--text-color);
   font-weight: bold;
