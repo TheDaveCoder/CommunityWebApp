@@ -143,5 +143,5 @@ ul:has(li > a[href="forum.html"].selected-button) > .selector-bar {
 }
 
 ul:has(li > a[href="announcement.html"].selected-button) > .selector-bar {
-  top: 17.5rem;
+  top: 17.9rem;
 }
