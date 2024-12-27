@@ -1,0 +1,100 @@
+.right-bar {
+  margin: 0;
+  padding: 0;
+  color: white;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  height: 100vh;
+}
+
+.column {
+  margin: 1.5rem;
+  width: 500px;
+  background-color: var(--bg-color);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(1, 7, 56, 0.466);
+}
+
+.header-urgent {
+  background-color: #d93025;
+  border-radius: 20px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-urgent h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.header-urgent .icon {
+  color: white;
+}
+
+.header-event {
+  background-color: var(--secondary-bg);
+  border-radius: 20px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-event h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.header-event .icon {
+  color: white;
+}
+
+.header-notice {
+  background-color: var(--notice-bg);
+  border-radius: 20px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-notice h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.header-notice .icon {
+  color: white;
+}
+
+.card {
+  padding: 15px;
+  background-color: var(--text-bg);
+  border-radius: 10px;
+  margin: 1.5rem;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.card p {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.card .time {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #666;
+}
