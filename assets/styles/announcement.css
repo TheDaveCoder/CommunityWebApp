@@ -11,19 +11,39 @@
 .column {
   margin: 1.5rem;
   width: 500px;
-  background-color: var(--bg-color);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(1, 7, 56, 0.466);
+
+  display: flex;
+  flex-direction: column;
+}
+
+#urgent {
+  background-color: #d93025;
+}
+
+#event {
+  background-color: var(--secondary-bg);
+}
+
+#notice {
+  background-color: var(--notice-bg);
 }
 
 .header-urgent {
   background-color: #d93025;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   padding: 10px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.content {
+  border-radius: 20px 20px 0 0;
+  height: 100%;
+  background-color: var(--bg-color);
 }
 
 .header-urgent h2 {
