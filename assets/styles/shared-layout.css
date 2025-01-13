@@ -64,7 +64,7 @@
   justify-content: space-between;
 }
 
-.menu-content-wrapper > ul {
+.menu-content-wrapper>ul {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -81,11 +81,11 @@
   left: -1.125rem;
 }
 
-.menu-content-wrapper > ul > li {
+.menu-content-wrapper>ul>li {
   list-style-type: none;
 }
 
-.menu-content-wrapper > ul > li > a {
+.menu-content-wrapper>ul>li>a {
   text-decoration: none;
 }
 
@@ -106,11 +106,11 @@ h1 {
   cursor: pointer;
 }
 
-.menu-btn > svg {
+.menu-btn>svg {
   color: var(--secondary-text);
 }
 
-.menu-btn > h1 {
+.menu-btn>h1 {
   color: var(--secondary-text);
 }
 
@@ -130,18 +130,73 @@ h1 {
   color: var(--secondary-bg);
 }
 
-ul:has(li > a[href="dashboard.html"].selected-button) > .selector-bar {
+ul:has(li > a[href="dashboard.html"].selected-button)>.selector-bar {
   top: -0.5rem;
 }
 
-ul:has(li > a[href="dues.html"].selected-button) > .selector-bar {
+ul:has(li > a[href="dues.html"].selected-button)>.selector-bar {
   top: 5rem;
 }
 
-ul:has(li > a[href="forum.html"].selected-button) > .selector-bar {
+ul:has(li > a[href="forum.html"].selected-button)>.selector-bar {
   top: 11.5rem;
 }
 
-ul:has(li > a[href="announcement.html"].selected-button) > .selector-bar {
+ul:has(li > a[href="announcement.html"].selected-button)>.selector-bar {
   top: 17.9rem;
+}
+
+/* basic tab */
+
+.right-bar {
+  padding: var(--content-spacing);
+}
+
+.content-wrapper {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card-content-wrapper {
+  width: 100%;
+  padding: 1rem;
+}
+
+.card-title-wrapper {
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-body-wrapper {
+  padding: 1.5rem 1rem;
+  height: 100%;
+}
+
+.card-title {
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.card-icon {
+  height: 1.5rem;
+}
+
+.card-container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-bg);
+  border-radius: var(--border-radius);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content-container {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
 }
