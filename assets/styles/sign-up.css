@@ -66,6 +66,7 @@ button:focus {
 }
 
 .content-wrapper {
+  margin-left: 100px;
   border-radius: 20px;
   width: min(55rem, 80%);
   background-color: var(--secondary-bg);
