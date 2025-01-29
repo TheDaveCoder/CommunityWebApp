@@ -1,0 +1,111 @@
+.right-bar {
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    height: 100vh;
+  }
+
+.user-container{
+    position: relative;
+    margin: 2rem 2.5rem 2rem 2.5rem;
+    width: 1400px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(1, 7, 56, 0.466);
+    background-color: var(--secondary-bg);
+}
+
+.resident-column{
+    position: absolute;
+    z-index: 40;
+    width: 230px;
+    height: 640px;
+    border-radius: 20px;
+    background-color: var(--bg-color);
+    display: flex;
+}
+.resident-column svg{
+    margin-top: 1rem;
+    margin-left:2.5rem;
+}
+
+.resident-column h2{
+    margin-left:.5rem;
+    margin-top:1rem;
+    cursor: pointer;
+}
+
+.resident-page{
+    position: absolute;
+    z-index: 50;
+    margin-top: 4rem;
+    height: 585px ;
+    width: 1302px;
+    border-radius: 20px;
+    background-color: var(--bg-color);
+}
+
+.resident-titlebar{
+    margin: 1.5rem;
+    
+}
+.resident-titlebar svg{
+    fill:grey;
+    position: relative;
+    top: 7px;
+    left: 50px;
+    align-items:center;
+}
+.resident-titlebar input{
+    width: 210px;
+    height: 40px;
+    border-radius: 15px;
+    padding-left: 60px;
+    border: none;
+}
+.resident-titlebar button{
+    height: 40px;
+    width: 100px;
+    margin-left: 900px;
+    border-radius: 10px;
+    background-color: var(--debug);
+    border: none;
+}
+.resident-titlebar button:hover{
+    background-color: darkred;
+}
+.resident-titlebar span{
+    color: white;
+    padding-left: 14px;
+}
+#discard{
+    position: relative;
+    top: 1px;
+    left: 925px;
+}
+.pendingrequest-column{
+    margin-left: 12rem;
+    position: absolute;
+    z-index: 30;
+    width: 300px;
+    height: 650px;
+    border-radius: 20px;
+    background-color: var(--bg-color);
+    opacity: 80%;
+    display: flex;
+}
+.pendingrequest-column svg{
+    margin-top: 1rem;
+    margin-left:3rem;
+}
+
+.pendingrequest-column h2{
+    margin-left:.5rem;
+    margin-top:1rem;
+    cursor: pointer;
+}
+
+
+
