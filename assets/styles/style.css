@@ -23,6 +23,16 @@
   font-family: "Montagu Slab", sans-serif;
 }
 
+input,
+textarea,
+select {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
 h2 {
   font-weight: 400;
   font-size: 1.25rem;
