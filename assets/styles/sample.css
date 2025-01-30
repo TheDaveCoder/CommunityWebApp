@@ -1,0 +1,26 @@
+body {
+    background-color: var(--bg-color);
+    padding: 1rem;
+}
+
+.button {
+    border-radius: var(--border-radius);
+    background-color: var(--urgent-bg);
+    padding: 0.5rem 1rem;
+
+    display: inline;
+}
+
+.button {
+    cursor: pointer;
+}
+
+button {
+    background-color: inherit;
+    color: var(--text-color);
+    border: none;
+}
+
+svg {
+    margin-right: 0.25rem;
+}
