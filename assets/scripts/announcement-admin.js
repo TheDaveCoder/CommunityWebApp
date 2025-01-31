@@ -28,6 +28,8 @@ function showPrompt(promptType) {
 }
 
 function closePrompt(promptItem) {
+    promptItem.querySelectorAll("input").forEach(input => input.value = '');
+    promptItem.querySelector("textarea").value = '';
     promptItem.classList.remove("ov-active");
     overlay.classList.remove("ov-active");
 }

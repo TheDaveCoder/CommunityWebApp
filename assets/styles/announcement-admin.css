@@ -51,6 +51,10 @@
     background-color: var(--secondary-bg);
 }
 
+.p-exit-icon {
+    cursor: pointer;
+}
+
 .popup-prompt {
     position: absolute;
     top: 50%;
@@ -106,6 +110,12 @@
 
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.pp-content-box-group {
+    display: flex;
     gap: 1rem;
 }
 
