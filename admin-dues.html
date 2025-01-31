@@ -77,41 +77,56 @@
     </div>
     <div class="right-bar">
         <div class="dues-container">
+          <div class="header">
             <h2>Dues per Account</h2>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18.991 2H9.01003C7.89903 2 7.00003 2.899 7.00003 4.01V9.647L2.29803 14.289C2.15715 14.4283 2.06083 14.6064 2.02131 14.8006C1.98179 14.9947 2.00085 15.1963 2.07606 15.3796C2.15128 15.5629 2.27926 15.7197 2.44376 15.8302C2.60827 15.9407 2.80188 15.9998 3.00003 16V21C3.00003 21.2652 3.10539 21.5196 3.29292 21.7071C3.48046 21.8946 3.73481 22 4.00003 22H20C20.2652 22 20.5196 21.8946 20.7071 21.7071C20.8947 21.5196 21 21.2652 21 21V4.009C21 2.899 20.102 2 18.991 2ZM10.922 15.111V20H5.00003V14.432L7.98703 11.483L10.922 14.486V15.111ZM13 9H11V7H13V9ZM17 17H15V15H17V17ZM17 13H15V11H17V13ZM17 9H15V7H17V9Z" fill="white"/>
                 <path d="M7 15H9V17H7V15Z" fill="white"/>
                 </svg>
-        </div>
-        <div class="dues-main-container">
-                <div class="dues-titlebar">
-                    <svg
-                  width="20"
-                  height="20"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512">
-                  <path
-                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
-                  />
-                </svg>
-                    <input type="textbox" placeholder="Filter for records...">
-                </div>
+          </div>
+          <div class="dues-main-container">
+            <div class="titlebar">
+              <div class="search">
+                <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512">
+              <path
+                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+              />
+            </svg>
+                <input type="textbox" placeholder="Filter for records...">
+            </div>
+            </div>
+            
+            <table class="dues-list">
+              <tr class="table-header">
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Block/Lot #</th>
+                <th>Street</th>
+                <th>Current Balance</th>
+              </tr>
 
-                <div class="info-container">
-                    <div class="info-titlebar">
-                        <ul class="info-list">
-                            <li>First Name</li>
-                            <li>Last Name</li>
-                            <li>Block/Lot #</li>
-                            <li>Street</li>
-                            <li>Current Balance</li>
-                        </ul>
-                        <div class="info-main-container">
+              <tr>
+                <td>Joe Mama</td>
+                <td>Draelois</td>
+                <td>23</td>
+                <td>Nicotine</td>
+                <td>230.00 ₱</td>
+              </tr>
 
-                        </div>
-                    </div>
-                </div>
+              <tr>
+                <td>Joe Mama</td>
+                <td>Draelois</td>
+                <td>23</td>
+                <td>Nicotine</td>
+                <td>230.00 ₱</td>
+              </tr>
+
+            </table>
+          </div>
         </div>
+        
     </div>
     </div>
   </div>

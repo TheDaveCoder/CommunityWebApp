@@ -1,6 +1,6 @@
 .right-bar {
     margin: 0;
-    padding: 0;
+    padding: 2rem 0;
     color: white;
     display: flex;
     justify-content: left;
@@ -8,58 +8,62 @@
     height: 100vh;
   }
 
+.right-bar *{
+    font-size: 1.875rem;
+}
+
 .dues-container{
     position: relative;
-    z-index: 4;
-    margin: 2rem 2.5rem 2rem 2.5rem;
-    width: 1400px;
+    margin: 0 auto;
+    width: 95%;
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(1, 7, 56, 0.466);
     background-color: var(--secondary-bg);
 }
-
-.dues-container h2{
-    margin-left: 1.5rem;
-    margin-top: 1rem;
+.header{
+    width: 100%;
     display: flex;
-    
-}
-.dues-container svg{
-    position: relative;
+    justify-content: space-between;
     align-items: center;
-    left: 1250px;
-    top: -26px;
+    padding: 1rem 2rem;
+}
+.header svg{
+    width: 2.5rem;
+    
 }
 
 .dues-main-container{
     position: absolute;
-    margin-left: 40px;
-    margin-top: 80px;
-    z-index: 5;
-    width: 1305px;
-    height: 600px;
+    width: 100%;
+    height: 93%;
     border-radius: 20px;
     background-color: var(--bg-color);
+}
+.titlebar{
+    padding: 1.5rem;
     display: flex;
 }
-.dues-titlebar{
-    margin-left: .5rem;
-    margin-top: 1.5rem;
+.search {
+    background-color: var(--text-color);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.search>svg {
+    fill: grey;
+    width: 2rem;
     
 }
-.dues-titlebar svg{
-    fill:grey;
-    position: relative;
-    top: 7px;
-    left: 40px;
-    align-items:center;
-}
-.dues-titlebar input{
-    width: 210px;
-    height: 40px;
-    border-radius: 15px;
-    padding-left: 50px;
+
+.search>input {
     border: none;
+    font-size: 1.875rem;
+    color: var(--bg-color);
 }
 
 .info-titlebar{
@@ -86,15 +90,39 @@
     padding: 10px;
 }
 
-.info-main-container{
-    position: relative;
-    display: flex;
-    padding: 0;
-    margin-left:-1200px;
-    top: 35px;
-    height: 470px;
-    width: 1200px;
-    justify-content: space-evenly;
-    background-color: var(--bg-color);
+table{
+    width: 95%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    border-collapse: collapse;
+}
+
+.table-header{
+    background-color: var(--text-bg);
     
+}
+
+th,td{
+    padding: 0.5rem 1.5rem;
+    font-size: 1.875rem;
+    font-weight: 400;
+    text-align: left;
+
+}
+
+th:last-child, td:last-child{
+    text-align: right;
+}
+
+th:first-child{
+    border-radius: 20px 0 0 0;
+}
+
+th:last-child{
+    border-radius: 0 20px 0 0;
+}
+
+tr:hover{
+    background-color: var(--text-bg);
+    cursor: pointer;
 }
