@@ -1,7 +1,6 @@
 let addBtns = document.querySelectorAll(".add-announcement-btn");
 let prompts = document.querySelectorAll(".popup-prompt");
 let overlay = document.querySelector(".overlay");
-let bg = document.querySelector(".bg");
 
 addBtns.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -28,6 +27,8 @@ function showPrompt(promptType) {
 }
 
 function closePrompt(promptItem) {
+    promptItem.querySelectorAll("input").forEach(input => input.value = '');
+    promptItem.querySelector("textarea").value = '';
     promptItem.classList.remove("ov-active");
     overlay.classList.remove("ov-active");
 }

@@ -1,15 +1,20 @@
 .right-bar {
   margin: 0;
-  padding: 0;
+  padding: 2rem 0;
   color: white;
-  display: flex;
-  justify-content: left;
-  align-items: left;
   height: 100vh;
 }
 
+.right-bar-content.announcement {
+  color: white;
+  display: flex;
+  gap: 2rem;
+  justify-content: left;
+  align-items: left;
+}
+
 .column {
-  margin: 1.5rem;
+  position: relative;
   width: 500px;
   border-radius: 20px;
   overflow: hidden;
@@ -31,10 +36,17 @@
   background-color: var(--notice-bg);
 }
 
+.col-head {
+  padding: 0.75rem 2.5rem;
+}
+
+.col-head svg {
+  width: 2.5rem;
+}
+
 .header-urgent {
   background-color: #d93025;
   border-radius: 20px 20px 0 0;
-  padding: 10px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,13 +54,22 @@
 
 .content {
   border-radius: 20px 20px 0 0;
-  height: 100%;
+  height: 93.5%;
   background-color: var(--bg-color);
+
+  position: absolute;
+  bottom: 0;
+}
+
+.card-wrapper {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem 2.5rem;
 }
 
 .header-urgent h2 {
   margin: 0;
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
@@ -59,7 +80,6 @@
 .header-event {
   background-color: var(--secondary-bg);
   border-radius: 20px;
-  padding: 10px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -67,7 +87,7 @@
 
 .header-event h2 {
   margin: 0;
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
@@ -78,7 +98,6 @@
 .header-notice {
   background-color: var(--notice-bg);
   border-radius: 20px;
-  padding: 10px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -86,7 +105,7 @@
 
 .header-notice h2 {
   margin: 0;
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
@@ -98,7 +117,6 @@
   padding: 15px;
   background-color: var(--text-bg);
   border-radius: 10px;
-  margin: 1.5rem;
 }
 
 .card h3 {
