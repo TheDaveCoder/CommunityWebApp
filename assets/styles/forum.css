@@ -1,9 +1,7 @@
-.right-bar {
-  margin: 0;
-  padding: 1.5rem;
+.right-bar-content.forum {
   color: white;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .search-column {
@@ -12,6 +10,8 @@
   background-color: var(--secondary-bg);
   display: flex;
   flex-direction: column;
+
+  position: relative;
 }
 
 .search-container {
@@ -73,10 +73,11 @@
 }
 
 .content {
-  margin-top: 1rem;
-  padding: 1rem;
+  padding: 1.5rem 2.5rem;
+  position: absolute;
+  bottom: 0;
   border-radius: 20px;
-  height: 100%;
+  height: 91%;
   background-color: var(--bg-color);
 
   display: flex;
