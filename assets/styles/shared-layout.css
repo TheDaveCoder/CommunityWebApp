@@ -130,6 +130,8 @@ h1 {
   color: var(--secondary-bg);
 }
 
+/* Regular User */
+
 ul:has(li > a[href="dashboard.html"].selected-button)>.selector-bar {
   top: -0.5rem;
 }
@@ -145,6 +147,25 @@ ul:has(li > a[href="forum.html"].selected-button)>.selector-bar {
 ul:has(li > a[href="announcement.html"].selected-button)>.selector-bar {
   top: 17.9rem;
 }
+
+/* Admin */
+
+ul:has(li > a[href="admin-userlist.html"].selected-button)>.selector-bar {
+  top: -0.5rem;
+}
+
+ul:has(li > a[href="admin-dues.html"].selected-button)>.selector-bar {
+  top: 5rem;
+}
+
+ul:has(li > a[href="admin-forum.html"].selected-button)>.selector-bar {
+  top: 11.5rem;
+}
+
+ul:has(li > a[href="announcement-admin.html"].selected-button)>.selector-bar {
+  top: 17.9rem;
+}
+
 
 /* basic tab */
 
