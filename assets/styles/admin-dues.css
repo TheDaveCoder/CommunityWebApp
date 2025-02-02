@@ -201,6 +201,10 @@ input[type=number] {
     width: 1.5rem;
 }
 
+.p-exit-icon path:hover{
+    fill: var(--secondary-text);
+}
+
 .popup-prompt {
     position: absolute;
     top: 50%;
@@ -363,7 +367,15 @@ input[type=number] {
     color: var(--text-color);
 }
 
+.pppc-btn#cancel:hover {
+    color: var(--secondary-text);
+}
+
 .pppc-btn#confirm {
     background-color: var(--secondary-bg);
     color: var(--text-color);
+}
+
+.pppc-btn#confirm:hover {
+   background-color: var(--bg-color);
 }

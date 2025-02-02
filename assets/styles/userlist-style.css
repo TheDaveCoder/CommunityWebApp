@@ -31,7 +31,7 @@
 
 .pendingrequest-column {
     opacity: 80%;
-    left: 15rem;
+    left: 14rem;
     z-index: 1;
 }
 
@@ -132,9 +132,22 @@
 .titlebar-btn.red {
     background-color: var(--debug);
 }
+.titlebar-btn.red:hover{
+    background-color: darkred;
+    cursor: pointer;
+}
 
 .titlebar-btn.green {
     background-color: var(--notice-bg);
+}
+
+.titlebar-btn.green:hover {
+    background-color: darkgreen;
+    cursor: pointer;
+}
+
+.titlebar-btn.green button:hover{
+    cursor: pointer;
 }
 
 .titlebar-btn svg {
@@ -149,7 +162,6 @@
 }
 
 .titlebar-btn.red button:hover {
-    background-color: darkred;
     cursor: pointer;
 }
 

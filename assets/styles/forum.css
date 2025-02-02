@@ -72,6 +72,10 @@
   width: 1.125rem;
 }
 
+#new-post:hover {
+  background-color: var(--text-bg);
+}
+
 .content {
   padding: 1.5rem 2.5rem;
   position: absolute;
@@ -141,7 +145,7 @@
 }
 
 .chat-column {
-  width: 900px;
+  width: 70%;
   border-radius: 20px;
   background-color: var(--secondary-bg);
 }
@@ -303,6 +307,10 @@
   cursor: pointer;
 }
 
+.p-exit-icon path:hover {
+  fill: var(--secondary-text);
+}
+
 .popup-prompt {
   position: absolute;
   top: 50%;
@@ -414,8 +422,15 @@
   background-color: inherit;
   color: var(--text-color);
 }
+.pppc-btn#cancel:hover {
+  color: var(--secondary-text);
+}
 
 .pppc-btn#confirm {
   background-color: var(--secondary-bg);
   color: var(--text-color);
+}
+
+.pppc-btn#confirm:hover {
+  background-color: var(--bg-color);
 }

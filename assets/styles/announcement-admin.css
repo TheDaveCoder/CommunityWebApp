@@ -15,6 +15,10 @@
     cursor: pointer;
 }
 
+.add-announcement-btn:hover path{
+   fill: var(--secondary-text);
+}
+
 .bg {
     position: relative;
     z-index: 1;
@@ -54,6 +58,9 @@
 
 .p-exit-icon {
     cursor: pointer;
+}
+.p-exit-icon path:hover {
+   fill: var(--secondary-text);
 }
 
 .popup-prompt {
@@ -166,8 +173,15 @@
     background-color: inherit;
     color: var(--text-color);
 }
+.pppc-btn#cancel:hover {
+    color: var(--secondary-text);
+}
 
 .pppc-btn#confirm {
     background-color: var(--secondary-bg);
     color: var(--text-color);
+}
+
+.pppc-btn#confirm:hover {
+    background-color: var(--bg-color);
 }
