@@ -4,6 +4,9 @@
     grid-template-rows: repeat(4, 1fr);
     gap: var(--content-spacing);
 }
+.card-container{
+    box-shadow: 0 2px 5px rgb(78, 78, 78);
+}
 
 #card-event {
     grid-row: 1/5;
@@ -52,14 +55,14 @@
 }
 
 .item-ann-curr-left {
-    color: var(--secondary-text);
+    color: var(--dark-font);
     width: 6.5rem;
 }
 
 .item-ann-curr-right {
     width: 100%;
     border-radius: var(--border-radius);
-    background-color: var(--text-bg);
+    background-color: #E0E0DC;
     padding: 0.75rem;
 
     display: flex;
@@ -84,19 +87,19 @@
 
 .date-time-text {
     font-size: 0.75rem;
-    color: var(--text-color);
+    color: var(--dark-font);
     font-weight: 400;
 }
 
 .ann-item-title {
     font-size: 1.25rem;
-    color: var(--text-color);
+    color: var(--dark-font);
     font-weight: 400;
 }
 
 .ann-item-subtitle {
     font-size: 0.75rem;
-    color: var(--secondary-text);
+    color: var(--dark-font);
     font-weight: 400;
 }
 
@@ -107,7 +110,7 @@
 }
 
 .item-ann-curr-bar-notice {
-    background-color: var(--notice-bg);
+    background-color: #86A873;
 }
 
 .item-ann-curr-bar-event {
@@ -135,7 +138,7 @@
 .ann-prev-title-text {
     font-size: 1.5rem;
     font-weight: 400;
-    color: var(--secondary-text);
+    color: var(--dark-font);
 }
 
 .ann-prev-item-wrapper {
@@ -148,7 +151,7 @@
 }
 
 .ann-prev-item {
-    background-color: var(--text-bg);
+    background-color: #E0E0DC;
     border-radius: var(--border-radius);
     width: 100%;
     display: flex;
@@ -170,7 +173,7 @@
 }
 
 .prev-item-title {
-    color: var(--text-color);
+    color: var(--dark-font);
     font-weight: 400;
     font-size: 1.5rem;
 }
@@ -178,11 +181,11 @@
 .prev-item-subtitle {
     font-size: 0.75rem;
     font-weight: 400;
-    color: var(--secondary-text);
+    color: var(--dark-font);
 }
 
 .prev-item-recent {
-    color: var(--secondary-text);
+    color: var(--dark-font);
 }
 
 .card-body-typical-wrapper {
@@ -248,7 +251,7 @@
 }
 
 .item-forum {
-    background-color: var(--text-bg);
+    background-color: #e0e0dc;
     border-radius: var(--border-radius);
     padding: 0.75rem 1.5rem;
     display: flex;
@@ -257,11 +260,11 @@
 }
 
 .item-forum-title {
-    color: var(--text-color);
+    color: var(--dark-font);
 }
 
 .item-forum-subtitle {
-    color: var(--secondary-text);
+    color: var(--dark-font);
     font-weight: 400;
     font-size: 0.75rem;
 }
@@ -293,12 +296,12 @@
 }
 
 .item-forum-ucc-count {
-    color: var(--text-color);
+    color: var(--dark-font);
 }
 
 .item-forum-recency {
     font-size: 0.75rem;
-    color: var(--secondary-text);
+    color: var(--dark-font);
 }
 
 #card-dues {

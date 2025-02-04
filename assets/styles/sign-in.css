@@ -9,6 +9,7 @@
   --bg-color: #091828;
   --secondary-bg: #3684db;
   --text-color: white;
+  --secondary-text: #808080;
 }
 
 body {
@@ -66,6 +67,7 @@ body {
 .main-content-wrapper {
   background-color: var(--secondary-bg);
   border-radius: 13px;
+  box-shadow: 0 2px 5px rgb(78, 78, 78);
 }
 
 .account-type-switch {
@@ -113,7 +115,7 @@ body {
 
 .account-type-switch:has(.radio-buttons > #is-user:checked)+.Main>.form-login>h3::after {
   content: "Sign in with your User Account";
-  color: var(--text-color);
+  color: var(--secondary-text);
   font-weight: bold;
 }
 
@@ -123,7 +125,7 @@ body {
 
 .account-type-switch:has(.radio-buttons > #is-admin:checked)+.Main>.form-login>h3::after {
   content: "Sign in with your Admin Account";
-  color: var(--text-color);
+  color: var(--secondary-text);
   font-weight: bold;
 }
 
@@ -131,7 +133,7 @@ body {
   padding: 3rem;
   background: var(--bg-color);
   border: none;
-  color: var(--text-color);
+  color: var(--secondary-text);
   border-radius: 13px;
   display: flex;
   justify-content: center;
@@ -155,21 +157,21 @@ body {
   width: 365px;
   height: 46px;
   background: var(white);
-  color: var(--bg-color);
+  color: var(--secondary-text);
   border: none;
   outline: none;
-  border: none;
+  border: 1px solid rgb(78, 78, 78);
   border-radius: 8px;
   padding: 23px 45px 20px 40px;
   font-size: small;
 }
 
 .input-box input::placeholder {
-  color: var(--bg-color);
+  color: var(--secondary-text);
 }
 
 .input-box i {
-  color: var(--bg-color);
+  color: var(--secondary-text);
   position: absolute;
   left: 10px;
   top: 48%;
@@ -184,7 +186,7 @@ body {
 .remember-forgot a {
   margin-left: 3.5rem;
   text-decoration: none;
-  color: white;
+  color:var(--secondary-text);
 }
 
 .remember-forgot a:hover {
@@ -192,7 +194,7 @@ body {
 }
 
 .btn {
-  background: var(white);
+  background: var(--secondary-bg);
   justify-content: center;
   text-align: center;
   margin: 1rem auto;
@@ -210,7 +212,7 @@ body {
 }
 
 .btn:hover {
-  background-color: var(--secondary-bg);
+  background-color: var(--event-bg);
   color: white;
 }
 
@@ -225,7 +227,7 @@ body {
 }
 
 .register-link:hover {
-  color: white;
+  color: var(--event-bg);
 }
 
 .other-info {
@@ -245,16 +247,87 @@ body {
 }
 
 .other-info i {
-  color: white;
+  color: var(--secondary-text);
   font-size: 20px;
 }
 
 .number,
 .email {
-  color: white;
+  color: var(--secondary-text);
   font-size: 14px;
 }
 
+.container{
+  padding: 3rem;
+}
+
+.slider-wrapper{
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto;
+  
+}
+
+.slider{
+  display: flex;
+  aspect-ratio:1/1;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow:  0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 1rem;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider img{
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+  animation: slide 20s infinite;
+}
+
+@keyframes slide {
+  0%{
+    transform : translateX(0);
+  }
+  25%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(-100%);
+  } 
+  75%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(-200%);
+  }
+}
+
+.slider-nav{
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider-nav a{
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--text-color);
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover{
+  background-color: var(--secondary-bg);
+}
 /* @media (max-width: 1080px) {
   .Main {
     width: 90%;

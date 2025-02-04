@@ -7,6 +7,7 @@
 
 .card-container {
     height: auto;
+    box-shadow: 0 2px 5px rgb(78, 78, 78);
 }
 
 #card-egt {
@@ -46,6 +47,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--content-spacing);
+    
 }
 
 .card-af-wrapper {
@@ -55,7 +57,7 @@
 }
 
 .item-due {
-    background-color: var(--text-bg);
+    background-color: #e0e0dc;
     border-radius: var(--border-radius);
     padding: 1.5rem;
 
@@ -80,7 +82,7 @@
 .item-due-subitem-title,
 .item-due-subitem-detail {
     font-size: 1.25rem;
-    color: var(--text-color);
+    color: var(--dark-font);
 }
 
 .item-due-subitem.ssi-cont {

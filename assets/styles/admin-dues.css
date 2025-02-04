@@ -1,7 +1,7 @@
 .right-bar {
     margin: 0;
     padding: 2rem 0;
-    color: white;
+    color: var(--dark-font);
     display: flex;
     justify-content: left;
     align-items: left;
@@ -18,13 +18,14 @@
     height: 100%;
     width: 95%;
     border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(1, 7, 56, 0.466);
+    box-shadow: 0 2px 5px rgb(78, 78, 78);
     background-color: var(--secondary-bg);
 }
 
 .horizontal-content-alignment {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+    color: var(--text-color);
 }
 
 .header {
@@ -79,7 +80,7 @@
 .search>input {
     border: none;
     font-size: 1.5rem;
-    color: var(--bg-color);
+    color: var(--dark-font);
 }
 
 .info-titlebar {
@@ -120,7 +121,7 @@ table {
 }
 
 thead {
-    background-color: var(--text-bg);
+    background-color: var(--secondary-bg);
     position: sticky;
     top: 0;
 }
@@ -132,6 +133,9 @@ td {
     font-weight: 400;
     text-align: left;
 
+}
+td{
+    color: var(--dark-font);
 }
 
 th:last-child,
@@ -148,7 +152,7 @@ th:last-child {
 }
 
 .table-data:hover {
-    background-color: var(--text-bg);
+    background-color: rgba(18, 38, 60, 0.3);
     cursor: pointer;
 }
 
@@ -214,7 +218,7 @@ input[type=number] {
 
     width: 72rem;
     border-radius: var(--border-radius);
-    background-color: var(--event-bg);
+    background-color: var(--secondary-bg);
     display: none;
 }
 
@@ -226,7 +230,7 @@ input[type=number] {
     border-radius: var(--border-radius);
     height: 90%;
     width: 100%;
-    background-color: var(--text-bg);
+    background-color: var(--bg-color);
 }
 
 .c-wrap {
@@ -280,12 +284,12 @@ input[type=number] {
 
 .pp-section-title {
     padding-left: 1.75rem;
-    color: var(--text-color);
+    color: var(--dark-font);
     font-size: 1.8rem;
 }
 
 .pp-content-box {
-    background-color: var(--bg-color);
+    background-color: var(--secondary-text);
     border-radius: 15px;
     padding: 0.5rem 1rem;
 
@@ -364,11 +368,11 @@ input[type=number] {
 
 .pppc-btn#cancel {
     background-color: inherit;
-    color: var(--text-color);
+    color: var(--secondary-text);
 }
 
 .pppc-btn#cancel:hover {
-    color: var(--secondary-text);
+    color: var(--secondary-bg);
 }
 
 .pppc-btn#confirm {
@@ -377,5 +381,5 @@ input[type=number] {
 }
 
 .pppc-btn#confirm:hover {
-   background-color: var(--bg-color);
+   background-color: var(--event-bg);
 }

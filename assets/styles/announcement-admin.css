@@ -16,7 +16,7 @@
 }
 
 .add-announcement-btn:hover path{
-   fill: var(--secondary-text);
+   fill: var(--secondary-bg);
 }
 
 .bg {
@@ -53,7 +53,7 @@
 }
 
 #p-event {
-    background-color: var(--secondary-bg);
+    background-color: var(--event-bg);
 }
 
 .p-exit-icon {
@@ -83,7 +83,7 @@
     border-radius: var(--border-radius);
     height: 90%;
     width: 100%;
-    background-color: var(--text-bg);
+    background-color: var(--bg-color);
 }
 
 .c-wrap {
@@ -112,7 +112,7 @@
 }
 
 .pp-content-box {
-    background-color: var(--bg-color);
+    border: 3px solid var(--secondary-text);
     border-radius: 15px;
     padding: 1rem 1.5rem;
 
@@ -139,14 +139,14 @@
 }
 
 .ppcb-title {
-    color: var(--text-color);
+    color: var(--dark-font);
 }
 
 .ppcb-input {
     font-size: 1rem;
     background-color: inherit;
     border: none;
-    color: var(--text-color);
+    color: var(--dark-font);
     width: 100%;
 }
 
@@ -171,17 +171,44 @@
 
 .pppc-btn#cancel {
     background-color: inherit;
-    color: var(--text-color);
-}
-.pppc-btn#cancel:hover {
     color: var(--secondary-text);
 }
+.p-urgent-cancel#cancel:hover {
+    color: var(--urgent-bg);
+}
 
-.pppc-btn#confirm {
-    background-color: var(--secondary-bg);
+.p-event-cancel#cancel:hover {
+    color: var(--event-bg);
+}
+
+.p-notice-cancel#cancel:hover {
+    color: var(--notice-bg);
+}
+
+.p-urgent-confirm#confirm{
+    background-color: var(--urgent-bg);
     color: var(--text-color);
 }
 
-.pppc-btn#confirm:hover {
-    background-color: var(--bg-color);
+.p-event-confirm#confirm{
+    background-color: var(--event-bg);
+    color: var(--text-color);
+}
+
+.p-notice-confirm#confirm{
+    background-color: var(--notice-bg);
+    color: var(--text-color);
+}
+
+.p-urgent-confirm#confirm:hover{
+    background-color: darkred;
+   
+}
+
+.p-event-confirm#confirm:hover{
+    background-color: var(--secondary-bg);  
+}
+
+.p-notice-confirm#confirm:hover{
+    background-color: darkgreen;
 }

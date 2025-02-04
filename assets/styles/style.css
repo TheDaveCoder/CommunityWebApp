@@ -2,15 +2,17 @@
 
 :root {
   /* colors */
-  --bg-color: #091828;
+  --bg-color: #F4F4F2;
   --secondary-bg: #3684db;
   --text-color: white;
   --secondary-text: #808080;
   --debug: red;
   --text-bg: #12263c;
-  --notice-bg: #31ac48;
-  --event-bg: #3684db;
-  --urgent-bg: #d93025;
+  --notice-bg: #86A873;
+  --event-bg: #7a96c4;
+  --urgent-bg: #c65f5f;
+  --dark-font: black;
+  
   /* units */
   --content-spacing: 2rem;
   --border-radius: 20px;
