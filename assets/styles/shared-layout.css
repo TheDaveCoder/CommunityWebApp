@@ -273,7 +273,7 @@ ul:has(li > a[href="announcement-admin.html"].selected-button)>.selector-bar {
 }
 
 .lov-cont {
-  color: var(--text-color);
+  color: black;
   display: grid;
   place-items: center;
   gap: 1rem;
@@ -305,4 +305,8 @@ ul:has(li > a[href="announcement-admin.html"].selected-button)>.selector-bar {
   to {
     -webkit-transform: rotate(360deg);
   }
+}
+
+#up-react {
+  color: black;
 }
