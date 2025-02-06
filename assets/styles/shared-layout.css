@@ -3,6 +3,7 @@
 
 /* Background */
 /* --------------- */
+
 .bg {
   /* layout */
   height: 100vh;
@@ -231,4 +232,81 @@ ul:has(li > a[href="announcement-admin.html"].selected-button)>.selector-bar {
   width: 100%;
   background-color: var(--bg-color);
   border-radius: var(--border-radius);
+}
+
+.loading {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  background-color: var(--bg-color);
+  height: 100vh;
+  width: 100%;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading.active {
+  display: flex;
+}
+
+.loading-uc {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--bg-color);
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-uc.active {
+  display: flex;
+}
+
+.lov-cont {
+  color: black;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+
+.lov-cont h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.spinner {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, .3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+#up-react {
+  color: black;
 }

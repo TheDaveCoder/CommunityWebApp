@@ -27,7 +27,7 @@
                                     <div class="option-wrapper">
                                         <input type="radio" id="is-user" name="account-type" value="isUser" checked>
                                         <label for="is-user" class="checkmark"></label>
-                                        <label class="text-label" id="user" for="is-user">User</label>
+                                        <label for="is-user" class="text-label" id="user" value="isAdmin">User</label>
                                     </div>
                                     <div class="option-wrapper">
                                         <input type="radio" id="is-admin" name="account-type" value="isAdmin">
@@ -78,7 +78,7 @@
                             </div>
                         </div>
                         <div class="btn-wrapper">
-                            <button type="submit">Sign Up</button>
+                            <button id="submitBtn" type="submit">Sign Up</button>
                         </div>
                         <p class="login-redirect">
                             Already have an account?
@@ -89,6 +89,7 @@
             </div>
         </div>
     </div>
+    <script src="assets/scripts/func/sign-up.js"></script>
 </body>
 
 </html>

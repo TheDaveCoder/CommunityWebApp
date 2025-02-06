@@ -16,19 +16,23 @@ records.forEach(record => {
     })
 });
 
+function addRecord(record) {
+    recordCheckbox = record.querySelector('.chkbox');
+    if (!(recordCheckbox.classList.contains('checked'))) {
+        selectedRecords.push(record);
+        recordCheckbox.classList.add('checked');
+    } else {
+        selectedRecords = selectedRecords.filter(selected => selected !== record);
+        recordCheckbox.classList.remove('checked');
+    }
+}
+
 // Tab Switch
 tabBtns.forEach(tabBtn => {
     tabBtn.addEventListener('click', () => {
-        if (tabBtn.dataset.tabId == "2") {
-            document.querySelector('.pendingrequest-column').classList.add('active');
-            document.querySelector('.reqlist').classList.add('active');
-
-        } else {
-            document.querySelector('.pendingrequest-column').classList.remove('active');
-            document.querySelector('.reqlist').classList.remove('active');
-        }
-
-        // Refresh Table
-        // Code
+        selectedRecords = [];
+        refresh(tabBtn.dataset.tabId);
     });
 });
+
+document.querySelector("#btn-reject").addEventListener('click', () => { rejectUser() });

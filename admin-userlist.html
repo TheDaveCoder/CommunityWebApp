@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="assets/scripts/func/log-validation.js"></script>
   <link rel="stylesheet" href="assets/styles/style.css" />
   <link rel="stylesheet" href="assets/styles/shared-layout.css" />
   <link rel="stylesheet" href="assets/styles/userlist-style.css">
@@ -11,6 +12,12 @@
 </head>
 
 <body>
+  <div class="loading">
+    <div class="lov-cont">
+      <h1>Please Wait..</h1>
+      <div class="spinner"></div>
+    </div>
+  </div>
   <div class="bg">
     <div class="lower-bar"></div>
     <div class="left-bar">
@@ -56,7 +63,7 @@
             </a>
           </li>
           <li>
-            <a href="announcement-admin.html" class="menu-btn">
+            <a href="admin-announcement.html" class="menu-btn">
               <svg width="38" height="38" viewBox="0 0 58 58" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M49.938 8.40515L19.3333 19.3333V36.25L21.141 36.8952L18.4174 42.3424C18.1072 42.9617 17.9338 43.6404 17.9089 44.3326C17.884 45.0247 18.0083 45.7142 18.2732 46.3541C18.5382 46.994 18.9377 47.5695 19.4446 48.0415C19.9514 48.5135 20.5539 48.871 21.2111 49.0897L31.0807 52.3788C32.1848 52.7388 33.3811 52.6923 34.454 52.2479C35.5268 51.8034 36.4055 50.9902 36.9315 49.9549L40.0804 43.6571L49.938 47.1782C50.3025 47.3082 50.6929 47.3488 51.0764 47.2965C51.4599 47.2442 51.8252 47.1006 52.1416 46.8778C52.458 46.6549 52.7163 46.3593 52.8947 46.0158C53.073 45.6724 53.1663 45.2911 53.1666 44.9041V10.6792C53.1663 10.2922 53.073 9.91093 52.8947 9.56747C52.7163 9.224 52.458 8.92841 52.1416 8.70554C51.8252 8.48268 51.4599 8.33907 51.0764 8.28679C50.6929 8.23452 50.3025 8.27511 49.938 8.40515ZM32.6081 47.7944L22.7408 44.5053L25.7254 38.5337L35.4936 42.0234L32.6081 47.7944ZM9.66665 36.25H14.5V19.3333H9.66665C7.00106 19.3333 4.83331 21.5011 4.83331 24.1666V31.4167C4.83331 34.0822 7.00106 36.25 9.66665 36.25Z"
@@ -78,6 +85,12 @@
     </div>
     <div class="right-bar">
       <div class="user-container">
+        <div class="loading-uc">
+          <div class="lov-cont">
+            <h1>Fetching records..</h1>
+            <div class="spinner"></div>
+          </div>
+        </div>
         <input type="checkbox" id="state-request-column">
         <div class="resident-column tab-col" data-tab-id="1">
           <div class="column-title">
@@ -102,15 +115,15 @@
 
         <div class="resident-page">
           <div class="resident-titlebar">
-            <div class="search">
+            <!-- <div class="search">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path
                   d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
               </svg>
               <input type="textbox" placeholder="Filter for records...">
-            </div>
+            </div> -->
             <div class="btn-group userlist">
-              <div class="titlebar-btn red" id="btn-discard">
+              <div class="titlebar-btn red" id="btn-discard" onclick="deleteUser()">
                 <svg viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M3.46286 0.516513L0.51658 3.46279L6.40914 9.35535L0.51658 15.2479L3.46286 18.1942L9.35541 12.3016L15.248 18.1942L18.1942 15.2479L12.3017 9.35535L18.1942 3.46279L15.248 0.516511L9.35541 6.40907L3.46286 0.516513Z"
@@ -120,7 +133,7 @@
               </div>
             </div>
             <div class="btn-group reqlist">
-              <div class="titlebar-btn green" id="btn-accept">
+              <div class="titlebar-btn green" id="btn-accept" onclick="acceptUser()">
                 <svg width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M9.33336 15.5743L3.29619 9.53716L0.703857 12.1295L9.33336 20.759L27.1295 2.96283L24.5372 0.370499L9.33336 15.5743Z"
@@ -128,7 +141,7 @@
                 </svg>
                 <button>Accept</button>
               </div>
-              <div class="titlebar-btn red" id="btn-reject">
+              <div class="titlebar-btn red" id="btn-reject" onclick="rejectUser()">
                 <svg viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M3.46286 0.516513L0.51658 3.46279L6.40914 9.35535L0.51658 15.2479L3.46286 18.1942L9.35541 12.3016L15.248 18.1942L18.1942 15.2479L12.3017 9.35535L18.1942 3.46279L15.248 0.516511L9.35541 6.40907L3.46286 0.516513Z"
@@ -160,58 +173,6 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="table-data" data-record-id="0001">
-                    <td>
-                      <div class="checkmark-icon">
-                        <div class="chkbox"></div>
-                      </div>
-                    </td>
-                    <td>Joe Mama</td>
-                    <td>Draelois</td>
-                    <td>23</td>
-                    <td>Nicotine</td>
-                    <td>Dramma@ds.com</td>
-                    <td>0213-2323-32323</td>
-                  </tr>
-                  <tr class="table-data" data-record-id="0002">
-                    <td>
-                      <div class="checkmark-icon">
-                        <div class="chkbox"></div>
-                      </div>
-                    </td>
-                    <td>Joe Mama</td>
-                    <td>Draelois</td>
-                    <td>23</td>
-                    <td>Nicotine</td>
-                    <td>Dramma@ds.com</td>
-                    <td>0213-2323-32323</td>
-                  </tr>
-                  <tr class="table-data" data-record-id="0003">
-                    <td>
-                      <div class="checkmark-icon">
-                        <div class="chkbox"></div>
-                      </div>
-                    </td>
-                    <td>Joe Mama</td>
-                    <td>Draelois</td>
-                    <td>23</td>
-                    <td>Nicotine</td>
-                    <td>Dramma@ds.com</td>
-                    <td>0213-2323-32323</td>
-                  </tr>
-                  <tr class="table-data" data-record-id="0004">
-                    <td>
-                      <div class="checkmark-icon">
-                        <div class="chkbox"></div>
-                      </div>
-                    </td>
-                    <td>Joe Mama</td>
-                    <td>Draelois</td>
-                    <td>23</td>
-                    <td>Nicotine</td>
-                    <td>Dramma@ds.com</td>
-                    <td>0213-2323-32323</td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -223,6 +184,7 @@
   </div>
   </div>
   <script src="assets/scripts/userlist.js"></script>
+  <script src="assets/scripts/controllers/admin-userlist.js"></script>
 </body>
 
 </html>

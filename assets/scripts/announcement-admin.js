@@ -11,6 +11,7 @@ addBtns.forEach(btn => {
 
 function showPrompt(promptType) {
     let promptItem;
+    let confirmBtn = document.querySelector("." + promptType + "-confirm");
     let exitBtn = document.querySelector("." + promptType + "-exit");
     let cancelBtn = document.querySelector("." + promptType + "-cancel");
     overlay.classList.add("ov-active");
@@ -21,6 +22,7 @@ function showPrompt(promptType) {
     });
     promptItem.classList.add("ov-active");
 
+    confirmBtn.addEventListener("click", () => { confirmPrompt(promptType, promptItem); });
     exitBtn.addEventListener("click", () => closePrompt(promptItem));
     cancelBtn.addEventListener("click", () => closePrompt(promptItem));
     overlay.addEventListener("click", () => closePrompt(promptItem));

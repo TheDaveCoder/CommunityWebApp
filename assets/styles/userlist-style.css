@@ -70,7 +70,7 @@
 .resident-titlebar {
     padding: 1.5rem 2.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .search {
