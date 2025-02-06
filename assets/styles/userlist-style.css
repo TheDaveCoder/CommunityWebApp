@@ -1,7 +1,7 @@
 .right-bar {
     margin: 0;
     padding: 2rem 0;
-    color: white;
+    color: var(--dark-font);
     display: flex;
     justify-content: left;
     align-items: left;
@@ -19,7 +19,7 @@
     margin: 0 auto;
     width: 95%;
     border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(1, 7, 56, 0.466);
+    box-shadow: 0 2px 5px rgb(78, 78, 78);
     background-color: var(--secondary-bg);
 }
 
@@ -31,7 +31,7 @@
 
 .pendingrequest-column {
     opacity: 80%;
-    left: 15rem;
+    left: 14rem;
     z-index: 1;
 }
 
@@ -91,7 +91,7 @@
 .search>input {
     border: none;
     font-size: 1.5rem;
-    color: var(--bg-color);
+    color: var(--dark-font);
 }
 
 .btn-group {
@@ -130,11 +130,24 @@
 }
 
 .titlebar-btn.red {
-    background-color: var(--debug);
+    background-color: var(--urgent-bg);
+}
+.titlebar-btn.red:hover{
+    background-color: darkred;
+    cursor: pointer;
 }
 
 .titlebar-btn.green {
     background-color: var(--notice-bg);
+}
+
+.titlebar-btn.green:hover {
+    background-color: darkgreen;
+    cursor: pointer;
+}
+
+.titlebar-btn.green button:hover{
+    cursor: pointer;
 }
 
 .titlebar-btn svg {
@@ -149,7 +162,6 @@
 }
 
 .titlebar-btn.red button:hover {
-    background-color: darkred;
     cursor: pointer;
 }
 
@@ -173,7 +185,8 @@ table {
 }
 
 thead {
-    background-color: var(--text-bg);
+    color: var(--text-color);
+    background-color: var(--secondary-bg);
     position: sticky;
     top: 0;
 }
@@ -215,7 +228,7 @@ th:last-child {
     width: 24px;
     height: 24px;
     background-color: var(--bg-color);
-    border: 3px solid var(--text-color);
+    border: 3px solid var(--dark-font);
     border-radius: 7.5px;
 }
 
@@ -225,7 +238,7 @@ th:last-child {
 }
 
 .table-data:has(td>.checkmark-icon>.chkbox.checked) {
-    background-color: var(--text-bg);
+    background-color: var(--secondary-text);
 }
 
 #state-request-column {

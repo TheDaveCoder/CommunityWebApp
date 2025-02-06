@@ -70,6 +70,7 @@ button:focus {
   border-radius: 20px;
   width: min(55rem, 80%);
   background-color: var(--secondary-bg);
+  box-shadow: 0 2px 5px rgb(78, 78, 78);
 }
 
 .heading-wrapper {
@@ -79,7 +80,7 @@ button:focus {
 }
 
 .content-wrapper>.heading-wrapper>h1 {
-  color: var(--text-color);
+  color: var(--fg-color);
   font-weight: 400;
   font-size: 3rem;
 }
@@ -104,11 +105,11 @@ form {
 }
 
 label {
-  color: white;
+  color: var(--dark-font);
 }
 
 input {
-  color: var(--bg-color);
+  color: var(--dark-font);
 }
 
 .account-type-options {
@@ -193,6 +194,8 @@ input {
 
 .input-wrapper input {
   padding: 0.5rem 0.5rem;
+  border-radius: .25rem;
+  border: 1px solid rgb(78, 78, 78);
 }
 
 #fname-wrapper {
@@ -211,14 +214,16 @@ button {
   padding: 0.5rem 5rem;
   cursor: pointer;
   border-radius: 5px;
+  background-color: var(--secondary-color);
+  color: var(--fg-color);
 }
 
 button:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--event-bg);
 }
 
 .login-redirect {
-  color: white;
+  color: var(--dark-font);
   text-align: center;
 }
 
@@ -228,5 +233,5 @@ button:hover {
 }
 
 .login-redirect a:hover {
-  color: white;
+  color: var(--event-bg);
 }
