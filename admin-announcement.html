@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="assets/scripts/func/log-validation.js"></script>
   <link rel="stylesheet" href="assets/styles/style.css" />
   <link rel="stylesheet" href="assets/styles/shared-layout.css" />
   <link rel="stylesheet" href="assets/styles/announcement.css">
@@ -12,6 +13,12 @@
 </head>
 
 <body>
+  <div class="loading">
+    <div class="lov-cont">
+      <h1>Please Wait..</h1>
+      <div class="spinner"></div>
+    </div>
+  </div>
   <div class="popup-prompt" id="p-urgent">
     <div class="pp-titlebar-wrapper c-wrap">
       <h2 class="pp-title">Urgent Announcement Details</h2>
@@ -34,7 +41,7 @@
               </svg>
               <h3 class="ppcb-title">Announcement Title</h3>
             </div>
-            <input type="text" class="ppcb-input" placeholder="Some title..">
+            <input type="text" class="ppcb-input ne-title" placeholder="Some title..">
           </div>
           <div class="pp-content-box">
             <div class="ppcb-titlebar">
@@ -45,11 +52,11 @@
               </svg>
               <h3 class="ppcb-title">Announcement Body</h3>
             </div>
-            <textarea class="ppcb-input" id="ppcb-body" placeholder="Some announcement body.."></textarea>
+            <textarea class="ppcb-input ne-body" id="ppcb-body" placeholder="Some announcement body.."></textarea>
           </div>
           <div class="pp-prompt-controls">
             <button class="pppc-btn p-urgent-cancel" id="cancel">Cancel</button>
-            <button class="pppc-btn" id="confirm">Confirm</button>
+            <button class="pppc-btn p-urgent-confirm" id="confirm">Confirm</button>
           </div>
         </div>
       </div>
@@ -77,7 +84,7 @@
               </svg>
               <h3 class="ppcb-title">Announcement Title</h3>
             </div>
-            <input type="text" class="ppcb-input" placeholder="Some title..">
+            <input type="text" class="ppcb-input ne-title" placeholder="Some title..">
           </div>
           <div class="pp-content-box-group">
             <div class="pp-content-box">
@@ -89,7 +96,7 @@
                 </svg>
                 <h3 class="ppcb-title">Date</h3>
               </div>
-              <input type="date" class="ppcb-input" placeholder="Date of event">
+              <input type="date" class="ppcb-input e-date" placeholder="Date of event">
             </div>
             <div class="pp-content-box">
               <div class="ppcb-titlebar">
@@ -100,7 +107,7 @@
                 </svg>
                 <h3 class="ppcb-title">Start Time</h3>
               </div>
-              <input type="time" class="ppcb-input" placeholder="Start of event">
+              <input type="time" class="ppcb-input e-start" placeholder="Start of event">
             </div>
           </div>
           <div class="pp-content-box">
@@ -112,11 +119,11 @@
               </svg>
               <h3 class="ppcb-title">Announcement Body</h3>
             </div>
-            <textarea class="ppcb-input" id="ppcb-body" placeholder="Some announcement body.."></textarea>
+            <textarea class="ppcb-input ne-body" id="ppcb-body" placeholder="Some announcement body.."></textarea>
           </div>
           <div class="pp-prompt-controls">
             <button class="pppc-btn p-event-cancel" id="cancel">Cancel</button>
-            <button class="pppc-btn" id="confirm">Confirm</button>
+            <button class="pppc-btn p-event-confirm" id="confirm">Confirm</button>
           </div>
         </div>
       </div>
@@ -144,7 +151,7 @@
               </svg>
               <h3 class="ppcb-title">Announcement Title</h3>
             </div>
-            <input type="text" class="ppcb-input" placeholder="Some title..">
+            <input type="text" class="ppcb-input ne-title" placeholder="Some title..">
           </div>
           <div class="pp-content-box">
             <div class="ppcb-titlebar">
@@ -155,11 +162,11 @@
               </svg>
               <h3 class="ppcb-title">Announcement Body</h3>
             </div>
-            <textarea class="ppcb-input" id="ppcb-body" placeholder="Some announcement body.."></textarea>
+            <textarea class="ppcb-input ne-body" id="ppcb-body" placeholder="Some announcement body.."></textarea>
           </div>
           <div class="pp-prompt-controls">
             <button class="pppc-btn p-notice-cancel" id="cancel">Cancel</button>
-            <button class="pppc-btn" id="confirm">Confirm</button>
+            <button class="pppc-btn p-notice-confirm" id="confirm">Confirm</button>
           </div>
         </div>
       </div>
@@ -235,6 +242,12 @@
     <div class="right-bar">
       <div class="right-bar-content announcement">
         <div class="column" id="urgent">
+          <div class="loading-uc">
+            <div class="lov-cont">
+              <h1>Fetching records..</h1>
+              <div class="spinner"></div>
+            </div>
+          </div>
           <div class="col-head header-urgent">
             <h2>Urgent</h2>
             <svg viewBox="0 0 35 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -253,16 +266,11 @@
             </svg>
           </div>
           <div class="content">
-            <div class="card-wrapper">
-              <div class="card">
-                <h3>Christmas Break</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius...</p>
-                <div class="time">9 hours ago</div>
-              </div>
+            <div class="card-wrapper" id="urgent-wrapper">
             </div>
             <div class="add-button-wrapper">
               <svg class="add-announcement-btn" data-add-id="p-urgent" width="50" height="50" viewBox="0 0 50 50"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M27.0833 14.5833H22.9166V22.9166H14.5833V27.0833H22.9166V35.4166H27.0833V27.0833H35.4166V22.9166H27.0833V14.5833Z"
                   fill="white" />
@@ -274,6 +282,12 @@
           </div>
         </div>
         <div class="column" id="event">
+          <div class="loading-uc">
+            <div class="lov-cont">
+              <h1>Fetching records..</h1>
+              <div class="spinner"></div>
+            </div>
+          </div>
           <div class="col-head header-event">
             <h2>Event</h2>
             <svg viewBox="0 0 35 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -283,7 +297,7 @@
             </svg>
           </div>
           <div class="content">
-            <div class="card-wrapper">
+            <div class="card-wrapper" id="event-wrapper">
               <div class="card">
                 <h3>Year End Party</h3>
                 <p>Magkakaroon ng Party sa club house natin sa darating na December 20, 2024, 5 PM. Wear Pink shirt.</p>
@@ -304,6 +318,12 @@
           </div>
         </div>
         <div class="column" id="notice">
+          <div class="loading-uc">
+            <div class="lov-cont">
+              <h1>Fetching records..</h1>
+              <div class="spinner"></div>
+            </div>
+          </div>
           <div class="col-head header-notice">
             <h2>Notice</h2>
             <svg viewBox="0 0 35 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -316,7 +336,7 @@
             </svg>
           </div>
           <div class="content">
-            <div class="card-wrapper">
+            <div class="card-wrapper" id="notice-wrapper">
               <div class="card">
                 <h3>Road Repair</h3>
                 <p>May Malubak na daan sa 3rd Street. May ginaganap na evemt sa kalsada
@@ -342,6 +362,7 @@
     </div>
   </div>
   <script src="assets/scripts/announcement-admin.js"></script>
+  <script src="assets/scripts/controllers/admin-announcement.js"></script>
 </body>
 
 </html>
